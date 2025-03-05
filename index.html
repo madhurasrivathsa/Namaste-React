@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World Program</h1>
+    </div>
+    <div id="root1">
+
+    </div>
+    <div id="root2">
+
+    </div>
+    <div id="root3"></div>
+   
+    <script>
+        let element = document.getElementById("root");  
+        element.style.color = "blue";
+        const heading = document.createElement("h1");
+        heading.innerHTML="Hello wrold PRogram"
+        const divElement=document.getElementById("root1")
+        divElement.appendChild(heading)
+        divElement.style.background="green";
+    </script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script>
+            const Rheading=React.createElement("h1",{},"Hello World From React");
+            const root2=ReactDOM.createRoot(document.getElementById("root2"));
+            root2.render(Rheading);
+
+            const parent=React.createElement("div",{id:"parent"},[
+                React.createElement("div",{id:"child1"},[
+                    React.createElement("div",{id:"heading1"},"HEADING 1"),
+                    React.createElement("div",{id:"heading2"},"HEADING 2"),
+                    ]),
+                React.createElement("div",{id:"child2"},[
+                    React.createElement("div",{id:"heading3"},"HEADING3"),
+                    React.createElement("div",{id:"heading4"},"HEADING4")
+                ]),
+                ]);
+
+                const root3=ReactDOM.createRoot(document.getElementById("root3"));
+                root3.render(parent)
+            
+        </script>
+    
+   
+    
+</body>
+
+</html>
